@@ -4,16 +4,33 @@ const initialState = [
       id: 0,
       cards: [
         {
-            id:0,
+            id: 0,
             text: "we created a static list and static card"
+        },
+        {
+          id: 1, 
+          text: "we used a mix between material UI React and styled component"
         }
       ]
-  }
-
-
-
-
-]
+  },
+      title: "This Episode",
+      id: 0,
+      cards: [
+        {
+            id: 0,
+            text: "we cwill create our first reducer"
+        },
+        {
+          id: 1, 
+          text: "and render many cards on our list with static data"
+        },
+        {
+          id: 2,
+          text: "we will also make some little changes I forgot in the last episode (link tags for roboto font and icons,..)"
+        }
+      ]
+  
+];
 
 
 const listsReducer = (state = initialState, action) => {

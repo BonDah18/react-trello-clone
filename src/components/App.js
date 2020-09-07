@@ -8,13 +8,21 @@ function App() {
   return (
     <div>
       <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-      {lists.mpa(list => (
-        <TrelloList title={list.title} cards={list.cards} />
+      <div styles={styles.listContainer}>
+      {lists.map(list => (
+        <TrelloList key={list.id} title={list.title} cards={list.cards} />
       ))}
+      </div>
     </div>
   );
 }
+
+const styles = {
+  listContainer: {
+    display: "flex", 
+    flexDirecion: "row",
+  }
+};
 
 const mapStateToProps = state =>({
   lists: state.lists
