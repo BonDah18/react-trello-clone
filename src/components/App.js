@@ -1,19 +1,32 @@
 import React from "react";
 import TrelloList from './TrelloList';
 import { connect } from "react-redux";
+import TrelloActionButton from './TrelloActionButton';
+import { DragDropContext } from "react-beautiful-dnd";
 
 function App() {
 
+  onDragEnd = () => {
+    //TODO: reordering logic
+  }
+
   const { lists } = this.props; 
   return (
+    <DragDropContext onDragEnd={this.onDragEnd }>
     <div>
-      <h1>Hello StackBlitz!</h1>
+      <h1>Hello FastTrackers!</h1>
       <div styles={styles.listContainer}>
       {lists.map(list => (
-        <TrelloList key={list.id} title={list.title} cards={list.cards} />
+        <TrelloList 
+        listID={list.id}
+        key={list.id} 
+        title={list.title} 
+        cards={list.cards} />
       ))}
+      <TrelloActionButton list />
       </div>
     </div>
+    </DragDropContext>
   );
 }
 
