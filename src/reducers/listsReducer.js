@@ -83,7 +83,7 @@ const listsReducer = (state = initialState, action) => {
             const newState = [...state];
 
             //draggable lists around
-            if(ype === "list") {
+            if(type === "list") {
               const list = newState.splice(droppableIdIndexStart, 1);
               newState.splice(droppableIdIndexEnd, 0, ...list);
               return newState;
