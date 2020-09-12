@@ -14,6 +14,7 @@ const ListContainer = styled.div`
 function App() {
 
   onDragEnd = (result) => {
+    //TODO reordering logic
     const {destination, source, draggableID, type} = result;
 
     if(!destination) {
