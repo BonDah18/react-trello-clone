@@ -20,25 +20,28 @@ function App() {
       return;
     }
 
-    this.props.dispatch(sort())
+    this.props.dispatch(
+      sort(
       source.droppableId,
       destination.draggableID,
       source.index, 
       destination.index,
       draggableID,
       type
+      ));
+      
   };
 
   const { lists } = this.props; 
   return (
-    <DragDropContext onDragEnd={this.onDragEnd }>
+    <DragDropContext onDragEnd={this.onDragEnd}>
     <div>
       <h1>Hello FastTrackers!</h1>
-      <Droppable droppableId="all-list" direction="horizontal" type="list">
+      <Droppable droppableId="all-lists" direction="horizontal" type="list">
       {provided => (
         <ListContainer {...provided.droppableProps} 
         ref={provided.innerRef}>
-      {lists.map((list, index) => (
+        {lists.map((list, index) => (
         <TrelloList 
         listID={list.id}
         key={list.id} 
@@ -58,7 +61,7 @@ function App() {
 }
 
 
-const mapStateToProps = state =>({
+const mapStateToProps = state => ({
   lists: state.lists
 })
 

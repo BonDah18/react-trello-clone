@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
 import CardContent from '@material-ui/core/CardContent';
 import {Draggalbe} from "react-beautiful-dnd";
-import sytled from "styled-components";
+import styled from "styled-components";
 
 const CardContainer = styled.div`
   margin-b ottom: 8px;
