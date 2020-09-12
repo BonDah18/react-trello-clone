@@ -51,7 +51,7 @@ const listsReducer = (state = initialState, action) => {
         listID += 1;
         return [...state, newList];
 
-        case CONSTANTS.ADD_CARD:
+        case CONSTANTS.ADD_CARD: {
           const newCard = {
             text: action.payload.text,
             id: `card-${cardID}`
@@ -70,6 +70,51 @@ const listsReducer = (state = initialState, action) => {
           });
 
           return newState;
+        }
+
+          case CONSTANTS.DRAG_HAPPENED:
+            const {
+              droppableIdStart, 
+              droppableIdEnd,
+              droppableIdIndexStart,
+              droppableIdIndexEnd, 
+              draggableId
+            } = action.payload;
+            const newState = [...state];
+
+            //draggable lists around
+            if(ype === "list") {
+              const list = newState.splice(droppableIdIndexStart, 1);
+              newState.splice(droppableIdIndexEnd, 0, ...list);
+              return newState;
+            }
+
+
+            //if in the same list
+            if(droppableIdStart === droppableIdEnd) {
+            const list = state.find(list => droppableIdStart === list.id);
+            const card = list.card.splice(droppableIdIndexStart, 1)
+            list.card.splice(droppableIdIndexEnd, 0, ...card)  
+            }
+
+
+          //other listID
+          if(droppableIdStart !== droppableIdEnd) {
+            // find the lsit where drag happened
+            const listStart = state.find(list => droppableIdStart === list.id)
+
+            //pull out the card from this list 
+            const card = listStart.cards.splice(droppableIdIndexStart, 1);
+
+            // find the lsit where drag ended 
+            const listEnd = state.find(list => droppableIdEnd === list.id);
+
+            // put the card in the new list 
+            listEnd.cards.splice(droppableIdIndexEnd, 0, ...card)
+          }
+            return newState;
+            
+
 
       default: 
       return state;
