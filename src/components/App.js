@@ -15,7 +15,7 @@ function App() {
 
   onDragEnd = (result) => {
     //TODO reordering logic
-    const {destination, source, draggableID, type} = result;
+    const {destination, source, draggableId, type} = result;
 
     if(!destination) {
       return;
@@ -24,10 +24,10 @@ function App() {
     this.props.dispatch(
       sort(
       source.droppableId,
-      destination.draggableID,
+      destination.draggableId,
       source.index, 
       destination.index,
-      draggableID,
+      draggableId,
       type
       ));
       

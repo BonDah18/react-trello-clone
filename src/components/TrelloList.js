@@ -15,7 +15,7 @@ const ListContainer = styled.div`
 
 function TrelloList({ title, cards, listID, index }) {
   return(
-  <Draggable draggableID={String(listID)} index={index}>
+  <Draggable draggableId={String(listID)} index={index}>
     {provided => (
       <ListContainer
       {...provided.draggableProps} 
