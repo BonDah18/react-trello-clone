@@ -11,7 +11,7 @@ const ListContainer = styled.div`
   flexDirection: row;
 `;
 
-function App() {
+class App extends Compoment {
 
   onDragEnd = (result) => {
     //TODO reordering logic
@@ -33,6 +33,7 @@ function App() {
       
   };
 
+  render () {
   const { lists } = this.props; 
   return (
     <DragDropContext onDragEnd={this.onDragEnd}>
