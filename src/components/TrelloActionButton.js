@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Icon from "@material-ui/core/Icon";
 import Textarea from 'react-textarea-autosize';
 import Card from '@material-ui/core/Card';

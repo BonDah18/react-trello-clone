@@ -9,7 +9,7 @@ const CardContainer = styled.div`
   margin-b ottom: 8px;
 `
 
-function TrelloCard({text, id, index}) {
+const TrelloCard = ({text, id, index}) => {
   return(
     <Draggable draggableId={String(id)} index={index}>
     {provided => (
