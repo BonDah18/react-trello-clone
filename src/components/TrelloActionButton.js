@@ -6,7 +6,7 @@ import Button from "@material-ui/core/Button";
 import {connect} from "react-redux";
 import { addList, addCard } from "../actions";
 
-class TrelloActionButton extends React.Component {
+class TrelloActionButton extends Component {
 
   state = {
     formOpen: false,
