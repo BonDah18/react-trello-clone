@@ -97,7 +97,7 @@ class TrelloActionButton extends Component {
       minWidth: 272,
       padding: "6px 8px 2px"
     }}>
-        <TextArea 
+        <Textarea 
           placeholder={placeholder} 
           autoFocus 
           onBlur={this.closeForm}
