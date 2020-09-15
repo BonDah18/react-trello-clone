@@ -53,7 +53,7 @@ class TrelloActionButton extends Component {
       this.setState({
         text: ""
       });
-      dispatch(addCard(listid, text));
+      dispatch(addCard(listID, text));
     }
   };
 
