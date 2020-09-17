@@ -10,7 +10,7 @@ const ListContainer = styled.div`
     width: 300px;
     padding: 8px;
     height: 100%;
-    marginRight: 8px;
+    margin-right: 8px;
 `
 
 const TrelloList = ({ title, cards, listID, index }) => {

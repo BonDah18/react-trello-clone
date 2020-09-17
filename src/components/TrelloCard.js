@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
   margin-b ottom: 8px;
-`
+`;
 
 const TrelloCard = ({text, id, index}) => {
   return(
@@ -31,5 +31,11 @@ const TrelloCard = ({text, id, index}) => {
     </Draggable>
   );
 };
+
+const styles = {
+  cardContainer: {
+    marginBottom: 8
+  }
+}
 
 export default TrelloCard; 
