@@ -78,6 +78,7 @@ const listsReducer = (state = initialState, action) => {
               droppableIdEnd,
               droppableIdIndexStart,
               droppableIdIndexEnd, 
+              // eslint-disable-next-line
               draggableId,
               type
             } = action.payload;
