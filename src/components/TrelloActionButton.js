@@ -10,22 +10,22 @@ class TrelloActionButton extends Component {
 
   state = {
     formOpen: false,
-    text: ""
+    text: "",
   };
 
   openForm = () => {
     this.setState({
       formOpen: true
-    });
-  };
+    })
+  }
 
-  closeForm = e => {
+  closeForm = (e) => {
     this.setState({
       formOpen: false
     });
   };
 
-  handleInputChange = e => {
+  handleInputChange = (e) => {
     this.setState({
       text: e.target.value
     });
@@ -38,7 +38,7 @@ class TrelloActionButton extends Component {
     if (text) {
       this.setState({
         text: ""
-      });
+      })
       dispatch(addList(text));
     }
 
@@ -60,7 +60,7 @@ class TrelloActionButton extends Component {
   renderAddbutton = () => {
     const { list } = this.props;
 
-    const buttonText = list ? "Add another list" : "Add another card"
+    const buttonText = list ? "Add another list" : "Add another card";
     const buttonTextOpacity = list ? 1 : 0.5;
     const buttonTextColor = list ? "white" : "inherit";
     const buttonTextBackground = list ? "rgba(0,0,0,.15)" : "inherit";
@@ -116,7 +116,7 @@ class TrelloActionButton extends Component {
       <Button 
       onMouseDown={ list ? this.handleAddList : this.handleAddCard}
       variant="contained" 
-      style={{ color: "white", backgroundColor: "#5aac44" }} 
+      style={{ color: "white", backgroundColor: "#5aac44", cursor: "pointer" }} 
       >{buttonTitle} {" "}
       </Button>
       <Icon style={{ marginLeft: 8, cursor: "pointer" }}>close</Icon>
@@ -136,7 +136,7 @@ const styles = {
   openForButtonGroup: {
     display: "flex",
     alignItems: "center",
-    cursor: 'pointer',
+    cursor: "pointer",
     borderRadius: 3, 
     height: 36, 
     width: 272,
