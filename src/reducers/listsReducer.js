@@ -47,7 +47,7 @@ const listsReducer = (state = initialState, action) => {
           title: action.payload,
           card: [],
           id: `list-${listID}`
-        }
+        };
         listID += 1;
         return [...state, newList];
 
@@ -55,15 +55,15 @@ const listsReducer = (state = initialState, action) => {
           const newCard = {
             text: action.payload.text,
             id: `card-${cardID}`
-          }
+          };
           cardID += 1;
 
           const newState = state.map(list => {
-            if(listID === action.payload.listID) {
+            if(list.id === action.payload.listID) {
               return {
                 ...list, 
                 cards: [list.cards, newCard]
-              }
+              };
             } else {
               return list
             }
@@ -94,12 +94,12 @@ const listsReducer = (state = initialState, action) => {
             //if in the same list
             if(droppableIdStart === droppableIdEnd) {
             const list = state.find(list => droppableIdStart === list.id);
-            const card = list.card.splice(droppableIdIndexStart, 1)
+            const card = list.card.splice(droppableIdIndexStart, 1);
             list.card.splice(droppableIdIndexEnd, 0, ...card)  
             }
 
 
-          //other listID
+          //when drag and drop happens across lists
           if(droppableIdStart !== droppableIdEnd) {
             // find the lsit where drag happened
             const listStart = state.find(list => droppableIdStart === list.id)
