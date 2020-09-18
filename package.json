@@ -24,5 +24,8 @@
   },
   "devDependencies": {
     "react-scripts": "latest"
-  }
+  },
+  "engines": {
+    "node": "12.18.4",
+    "npm": "6.14.8" }
 }
