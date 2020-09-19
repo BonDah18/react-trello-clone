@@ -102,7 +102,7 @@ const listsReducer = (state = initialState, action) => {
           //when drag and drop happens across lists
           if(droppableIdStart !== droppableIdEnd) {
             // find the lsit where drag happened
-            const listStart = state.find(list => droppableIdStart === list.id)
+            const listStart = state.find(list => droppableIdStart === list.id);
 
             //pull out the card from this list 
             const card = listStart.cards.splice(droppableIndexStart, 1);
