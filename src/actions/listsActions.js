@@ -10,8 +10,8 @@ export const addList = title => {
 export const sort = (
   droppableIdStart, 
   droppableIdEnd,
-  droppableIdIndexStart,
-  droppableIdIndexEnd, 
+  droppableIndexStart,
+  droppableIndexEnd, 
   draggableId,
   type
 ) => {
@@ -20,8 +20,8 @@ export const sort = (
     payload: {
       droppableIdStart,
       droppableIdEnd,
-      droppableIdIndexStart,
-      droppableIdIndexEnd,
+      droppableIndexStart,
+      droppableIndexEnd,
       draggableId,
       type
     }
