@@ -13,19 +13,20 @@ const TrelloCard = ({text, id, index}) => {
   return(
     <Draggable draggableId={String(id)} index={index}>
     {provided => (
-      <CardContainer
+      <CardContainer 
       ref={provided.innerRef} 
-      {...provided.draggableProps} 
+      {...provided.draggableProps}
       {...provided.dragHandleProps}>
-      
-        <Card>
-          <CardContent>
-            <Typography gutterBottom>
+
+      <Card>
+        <CardContent>
+          <Typography gutterBottom>
             {text}
-            </Typography>
-            </CardContent>
-         </Card>
-        </CardContainer>
+          </Typography>
+        </CardContent>
+      </Card>
+
+      </CardContainer>
     )}
     
     </Draggable>

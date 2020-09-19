@@ -93,6 +93,7 @@ class TrelloActionButton extends Component {
 
     return <div>
     <Card style={{
+      overflow: "visible",
       minHeight: 85,
       minWidth: 272,
       padding: "6px 8px 2px"

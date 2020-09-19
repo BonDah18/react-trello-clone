@@ -94,8 +94,8 @@ const listsReducer = (state = initialState, action) => {
             //if in the same list
             if(droppableIdStart === droppableIdEnd) {
             const list = state.find(list => droppableIdStart === list.id);
-            const card = list.card.splice(droppableIndexStart, 1);
-            list.card.splice(droppableIndexEnd, 0, ...card)  
+            const card = list.cards.splice(droppableIndexStart, 1);
+            list.cards.splice(droppableIndexEnd, 0, ...card)  
             }
 
 
