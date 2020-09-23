@@ -7,7 +7,7 @@ import styled from "styled-components";
 
 const CardContainer = styled.div`
   margin-bottom: 8px;
-  margin-right: 200px;
+  margin-right: 600px;
 `;
 
 const TrelloCard = ({text, id, index}) => {
@@ -37,7 +37,7 @@ const TrelloCard = ({text, id, index}) => {
 const styles = {
   cardContainer: {
     marginBottom: 8,
-    marginright: 200
+    marginright: 600
   }
 }
 
