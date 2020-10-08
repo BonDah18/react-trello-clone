@@ -7,8 +7,8 @@ import { sort } from "../actions";
 import styled from "styled-components";
 
 const ListContainer = styled.div`
-  display: flex,
-  flexDirection: "row"
+  display: flex;
+  flexDirection: "row";
 `;
 
 class App extends Component {
