@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const ListContainer = styled.div`
   display: flex,
-  flexDirection: row;
+  flexDirection: "row"
 `;
 
 class App extends Component {
