@@ -8,6 +8,7 @@ import styled from "styled-components";
 const CardContainer = styled.div`
   margin-bottom: 8px;
   margin-right: 20px;
+  word-wrap: break-word;
 `;
 
 const TrelloCard = ({text, id, index}) => {
