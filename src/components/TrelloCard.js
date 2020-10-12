@@ -6,9 +6,11 @@ import {Draggable} from "react-beautiful-dnd";
 import styled from "styled-components";
 
 const CardContainer = styled.div`
-  margin-bottom: 8px;
-  margin-right: 20px;
+  margin: 0 0 8px 0;
+  position: relative;
+  max-width: 100%;
   word-wrap: break-word;
+  
 `;
 
 const TrelloCard = ({text, id, index}) => {
