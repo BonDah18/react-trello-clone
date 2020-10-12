@@ -28,8 +28,8 @@ class TrelloActionButton extends Component {
   handleInputChange = (e) => {
     this.setState({
       text: e.target.value
-    });
-  };
+    })
+  }
 
   handleAddList = () => {
     const { dispatch } = this.props;
@@ -55,7 +55,7 @@ class TrelloActionButton extends Component {
       });
       dispatch(addCard(listID, text));
     }
-  };
+  }
 
   renderAddbutton = () => {
     const { list } = this.props;
@@ -86,15 +86,15 @@ class TrelloActionButton extends Component {
     const { list } = this.props;
 
     const placeholder = list 
-    ? "Enter list title..." 
-    : "Enter a title for this card...";
+    ? "Enter list title" 
+    : "Enter a title for this card";
 
     const buttonTitle = list ? "Add List" : "Add Card";
 
     return <div>
     <Card style={{
       overflow: "visible",
-      minHeight: 85,
+      minHeight: 65,
       minWidth: 272,
       padding: "6px 8px 2px"
     }}>
@@ -150,4 +150,4 @@ const styles = {
   }
 };
 
-export default connect () (TrelloActionButton); 
+export default connect() (TrelloActionButton); 

@@ -10,7 +10,6 @@ const CardContainer = styled.div`
   position: relative;
   max-width: 100%;
   word-wrap: break-word;
-  
 `;
 
 const TrelloCard = ({text, id, index}) => {
